@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">Notes App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                {{#if user}}
+                <li class="nav-item active">
+                    <a class="nav-link" href="/notes/">Notas </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/notes/add">Nueva Nota <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Cerrar sesion</a>
+                </li>
+                {{else}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="/signin" class="nav-link">Iniciar sesion</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/signup" class="nav-link">Registro</a>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</nav>
